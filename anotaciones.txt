@@ -1,0 +1,6 @@
+/*ver todas las versiones de webpack : npm view webpack versions --json */
+
+
+//webpack -p mimifica el contenido del bundle.js
+
+//para compilar css se necesita el loader css-loader y style-loader
