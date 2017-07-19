@@ -4,3 +4,8 @@
 //webpack -p mimifica el contenido del bundle.js
 
 //para compilar css se necesita el loader css-loader y style-loader
+
+//para evitar cacheos se necesita utilizar los archivos css fuera del bundle
+
+
+//El plugin HtmlWebpackPlugin permite generar un html con la configuracion basica y los assets linkeados.
