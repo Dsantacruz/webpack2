@@ -9,3 +9,6 @@
 
 
 //El plugin HtmlWebpackPlugin permite generar un html con la configuracion basica y los assets linkeados.
+
+
+//webpack dev server genera el contenido en memoria para que sea mas rapido, por ende no genera la carpeta dist

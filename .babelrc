@@ -1,0 +1,4 @@
+{//con conjuntos de reglas que se aplican a la hora de transformar los archivos javascript, en concentro env hace referencia a versiones antiguas y lo compila para q soporten los navegadores mas viejos
+    //conjunto de reglas env y el conjuunto de reglas para react
+  "presets": ["env", "react"]
+}

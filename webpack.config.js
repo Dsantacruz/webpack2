@@ -18,9 +18,9 @@ var webpack = require("webpack");
 module.exports = {
     context: path.resolve(__dirname, "src"),
     entry: {
-         app: './app.js', 
-         mobile: './mobile.js',
-         vendor: ['react', 'react-dom', 'rxjs']
+        app: './app.js',
+        mobile: './mobile.js',
+        vendor: ['react', 'react-dom', 'rxjs']
     },
     output: {
         filename: './[name]-bundle.js',
@@ -49,8 +49,24 @@ module.exports = {
                     //resolve-url-loader may be chained before sass-loader if necessary
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                /*options: {
+                    "presets": ["env", "react"]
+                } */
             }
         ]
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"), //especificar carpeta donde podamos meter contenido estatico como ficheros, imagenes, etc
+        compress: true, //el contenido que sirva el servidor web ira comprimido
+        publicPath: "/assets/", //prefijo en la url
+        //quiet: true, //evitamos que aparezca los mensajes de log en la terminal,
+        stats: "errors-only", //solo muestra los mensajes que sean error
+        port: 9000 //cambiar el puerto por defecto del servidor web
     },
     plugins: [
         extractCSS,
